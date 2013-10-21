@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Bob Kozdemba: Red Hat Colors: Red #d7302aff, Background #ca2b28ff -->
+<html>
+  <head>
+<link rel="stylesheet" href="paaslab.css" type="text/css"/>
+    <title>WordPress Lab</title></head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <body>
+      <div id="container">
+	<div id="header">
+	  <!-- Header start -->
+	  <img src="shadowmanHeaderSmall.gif" width="1024" height="84" alt="shadowman"/>
+	  <!-- Header end -->
+	</div>
+	<div id="body">
+	  <!-- Body start -->
+
+	  <h1>WORDPRESS LAB</h1>
+	  <p>
+	    <h3>Goal: <em>To create a WordPress Blog Site and run it on OpenShift.</em></h3>
+	  <p>
+	    There is a much <a href="wpeasy.html">easier </a>way to accompllish this but if you want to learn a bit more about OpenShift environment variables and how to deploy custom apps, this lab is for you. 
+	  <p>
+	    <a href="http://paaslab-demo20.rhcloud.com/dist/wordpress-3.5.1.zip"> Download WordPress</a>
+	  <p>
+	    <ol>
+	      <li>From the command line, create an OpenShift php-5.3 application and add a mysql cartridge.</li>
+	      <li><code>rhc app create -a blog -t php -p password</code></li>
+	      <li><code>rhc cartridge add -a blog -c mysql -p password</code></li>
+	      <li><b>Save the MYSQL admin login and password!</b></li>
+	      <li><code>cd</code> to the app's php directory and get a copy of the wordpress software.</li>
+	      <li><code>cp WordPress_Download_Dir/wordpress-3.5.1.zip .</code></li>
+	      <li>unzip the wordpress code into this directory</li>
+	      <li><code>unzip wordpress-3.5.1.zip</code></li>
+	      <li><code>cd wordpress</code></li>
+	      <li><code>cp wp-config-sample.php wp-config.php</code></li>
+	      <li>Edit wp-config.php and make the following changes:</li>
+	      <ul>
+		<li>define('DB_NAME', $_ENV['OPENSHIFT_APP_NAME']);</li>
+		<li>define('DB_USER', $_ENV['OPENSHIFT_MYSQL_DB_USERNAME']);</li>
+		<li>define('DB_PASSWORD', $_ENV['OPENSHIFT_MYSQL_DB_PASSWORD']);</li>
+		<li>define('DB_HOST', $_ENV['OPENSHIFT_MYSQL_DB_HOST'] . ':' .
+		  $_ENV['OPENSHIFT_MYSQL_DB_PORT']);</li>
+	      </ul>
+	      <li>Change up to the top-level directory for this app</li>
+	      <li>Now add, commit and push the new files using <code>git</code>.</li>
+	      <ul>
+		<li><code>git add php/wordpress</code></li>
+		<li><code>git commit -a -m "some message"</code></li>
+		<li><code>git push</code></li>
+	      </ul>
+	      <li>With your web browser, visit your app's <em>wp-admin/install.php</em> page.</li>
+	      <ul>
+		<li>Example: http://myblog-mynamespace.example.com/wordpress/wp-admin/install.php</li>
+	      </ul>
+	      <li>Answer the questions and wordpress should start.</li>
+	    </ol>
+	    <!-- Body end -->
+	</div>
+	<div id="footer">
+	  <!-- Footer start -->
+	  <p><h6><a href="index.html">OpenShift PaaS Road Tour, February 2013</a></h6></p>
+	  <!-- Footer end -->
+	</div>
+      </div>
+    </body>
+</html>

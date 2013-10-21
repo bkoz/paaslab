@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Bob Kozdemba: Red Hat Colors: Red #d7302aff, Background #ca2b28ff -->
+<html>
+  <head>
+<link rel="stylesheet" href="paaslab.css" type="text/css"/>
+    <title>Easy WordPress</title></head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <body>
+      <div id="container">
+	<div id="header">
+	  <!-- Header start -->
+	  <img src="shadowmanHeaderSmall.gif" width="1024" height="84" alt="shadowman"/>
+	  <!-- Header end -->
+	</div>
+	<div id="body">
+	  <!-- Body start -->
+
+	  <h1> IT'S SO EASY</h1>
+	  <p>
+	    Goal: Stand up WordPress in the Cloud in record time.
+	  <p>
+	    <ol>
+	      <li>Create a php application (<code>rhc app create myblog -t php-5.3 -p password</code>).</li>
+	      <li>Add a mysql cartridge (<code>rhc cartridge add -c mysql-5.1 -a myblog -p password</code>).</li>
+	      <li><code>cd myblog</code></li>
+	      <li>Clone an OpenShift Quickstart from github:(instructions also on github)</li>
+	      <ul>
+		<li><code>git remote add upstream -m master git://github.com/openshift/wordpress-example.git</code></li>
+		<li><code>git pull -s recursive -X theirs upstream master</code></li>
+		<li><code>git push</code></li>
+	      </ul>
+	      <li><a href="http://myblog-demo.example.com">Now visit the URL that was created</a></li>
+	    </ol>
+
+	    <!-- Body end -->
+	</div>
+	<div id="footer">
+	  <!-- Footer start -->
+	  <p><h6><a href="index.html">OpenShift PaaS Road Tour, February 2013</a></h6></p>
+	  <!-- Footer end -->
+	</div>
+      </div>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Bob Kozdemba: Red Hat Colors: Red #d7302aff, Background #ca2b28ff -->
+<html>
+  <head>
+<link rel="stylesheet" href="paaslab.css" type="text/css"/>
+    <title>OpenShift Software Installation and Configuration Lab</title></head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+    <body>
+      <div id="container">
+	<div id="header">
+	  <!-- Header start -->
+	  <img src="shadowmanHeaderSmall.gif" width="1024" height="84" alt="shadowman"/>
+	  <!-- Header end -->
+	</div>
+	<div id="body">
+	  <!-- Body start -->
+
+	  <h1> Software Installation and Configuration Lab</h1>
+	  <h3>Goal: <em>To install client tools for OpenShift.</em></h3><p>
+	    <ss>
+ We will be using 2 pieces of software, Ruby and GIT. A Ruby gem called <code>rhc</code> is used to interact with the OpenShift broker to create applications, add cartridges and obtain information. For revision control, we will be using <code>git</code> to push and pull application source code to and from the OpenShift nodes. 
+ </ss>
+	    <p>
+	    <h3>If you prefer not to install git and ruby, you can log in
+	      to broker.example.com using ssh (putty on Windows) and skip
+              to the <code>rhc setup</code> step.</h3>
+	    <p>
+	    <h3>Quick Instructions</h3>
+	  <p>
+	    Download and install <a href="https://broker.example.com/dist/client"> ruby, then git</a> for your platform.
+	  <p>
+	    Open a terminal shell (command prompt on Windows) and install rhc.
+	  <p>
+	    <code>C:> gem install rhc</code>
+	  <p>
+	    Open a terminal shell (git shell on Windows) and run the following command: (The instructor will provide everyone with a unique OpenShift user name and password)
+<p>
+	    <code>$ rhc setup --server broker.example.com</code> 
+	  <p>
+	    <u>Important:</u> When prompted for your <em>namespace</em>, set it to something unique, like your <em>user name</em>.
+	  <p>
+	    If everything goes well the final message should resemble:
+	    <br>
+	    <code>
+	      <br>
+	      Your client tools are now configured.
+	    </code>
+
+	    <!-- Body end -->
+	</div>
+	<div id="footer">
+	  <!-- Footer start -->
+	  <p><h6><a href="index.html">OpenShift PaaS Road Tour, February 2013</a></h6></p>
+	  <!-- Footer end -->
+	</div>
+      </div>
+    </body>
+</html>

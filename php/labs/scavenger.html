@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Bob Kozdemba: Red Hat Colors: Red #d7302aff, Background #ca2b28ff -->
+<html>
+  <head>
+<link rel="stylesheet" href="paaslab.css" type="text/css"/>
+    <title>ssh Scavenger Hunt</title></head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+    <body>
+      <div id="container">
+	<div id="header">
+	  <!-- Header start -->
+	  <img src="shadowmanHeaderSmall.gif" width="1024" height="84" alt="shadowman"/>
+	  <!-- Header end -->
+	</div>
+	<div id="body">
+	  <!-- Body start -->
+
+	  <h1> ssh SCAVENGER HUNT</h1>
+	  <h3>Goal: <em>Hunt for buried OpenShift treasures.</em></h3><p>
+	    <ol>
+	      <li>Choose an app that you've created. What public IP address is using? (hint: <code>host or dig</code>)</li>
+	      <li>Using the web console or CLI tools, find out the ssh login string for an application. (hint: <code>rhc domain show</code>)</li>
+	      <li>Now, <code>ssh</code> into the application.</li>
+	      <li>What is your home directory? (hint: <code>pwd</code>)</li>
+	      <li>Try to list all home directories. (hint: <code>ls</code>) </li>
+	      <li>What private IP addresses is your app using? (hint: <code>env</code>)</li>
+	      <li>How much memory is this app using? (hint: <code>oo-cgroup-read memory.usage_in_bytes</code>)</li>
+	      <li>Stop your app and check the memory usage (hint: <code>ctl_app graceful-stop</code>)</li>
+	      <li>Restart your app (hint: <code>ctl_app start</code>)</li>
+	      <li>What is the total memory available for your app? (hint: <code>oo-cgroup-read memory.limit_in_bytes</code>)</li>
+	    </ol>
+
+	    <!-- Body end -->
+	</div>
+	<div id="footer">
+	  <!-- Footer start -->
+	  <p><h6><a href="index.html">OpenShift PaaS Road Tour, February 2013</a></h6></p>
+	  <!-- Footer end -->
+	</div>
+      </div>
+    </body>
+</html>

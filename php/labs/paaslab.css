@@ -1,0 +1,105 @@
+body {
+    font: normal 1em Serif; 
+    font-family: Serif;
+    width: 80%; 
+    margin: 1em auto;
+}
+ss { 
+    width: 80%; 
+    margin: 1em auto;
+    font: 1em Serif;
+}
+h1 {
+    font: italic 2em Overpass; 
+    color: rgb(0, 0, 0);
+    margin: 1em 0 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+img {
+    margin: 0 20px 0 0;
+}
+h1 img {
+    margin-bottom: -20px;
+}
+small {
+    color: #666666;
+}
+
+h2 {
+    font-family:"Overpass";
+    color:black;
+    text-align:left;
+}
+
+h6 {
+    font-family:"Overpass";
+    color:black;
+    text-align:center;
+}
+h3 {
+    font-family:"Overpass";
+    color:black;
+    text-align:left;
+}
+h4 {
+    font-family:"Overpass";
+    color:black;
+    text-align:left;
+}
+h5 {
+    font-family:"Overpass";
+    color:black;
+    text-align:left;
+}
+p {
+    font-family:"Overpass";
+    font-size:20px;
+}
+
+code {
+    font-family:"Courier";
+    font-size:20px;
+    font-weight:bold;
+}
+red {
+    font-family:"Liberation Sans";
+    color:red;
+    text-align:left;
+}
+green {
+    font-family:"Liberation Sans";
+    color:green;text-align:left;
+}
+blue { font-family:"Liberation Sans";
+       color:blue;
+       text-align:left;
+     }
+
+
+html,
+#container {
+    min-height:100%;
+    position:relative;
+}
+#header {
+    color:#ca2b28ff;
+    padding:10px;
+}
+#body {
+    padding:10px;
+    padding-bottom:60px;	/* Height of the footer */
+}
+#footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;			/* Height of the footer */
+    background:#ca2b28ff;
+}
+#footer p {
+    margin:0;
+    padding:10px;
+}
+

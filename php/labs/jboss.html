@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- Bob Kozdemba: Red Hat Colors: Red #d7302aff, Background #ca2b28ff -->
+<html>
+  <head>
+    <link rel="stylesheet" href="paaslab.css" type="text/css"/>
+    <title>JBoss Developer Studio/OpenShift Lab</title></head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+  <body>
+    <div id="container">
+      <div id="header">
+	<!-- Header start -->
+	<img src="shadowmanHeaderSmall.gif" width="1024" height="84" alt="shadowman"/>
+	<!-- Header end -->
+      </div>
+      <div id="body">
+	<!-- Body start -->
+
+	<h1>JBoss Developer Studio(JBDS)/OpenShift Lab </h1>
+	<p>
+	  <h3>Goal: <em>To create a JBoss application with JBDS and run it on OpenShift.</em></h3>
+	<p>
+	  <h3><img src="jbds.gif" alt="jbds" width="87" height="124"> If all this GIT and CLI stuff is not your style checkout JDBS!</h3>
+	  <h4>JBDS Requires a => v1.6 JRE</h4> 
+	  <a href="https://broker.example.com/dist/client/jboss"> Download and install JBDS</a>
+	  <br>
+	  (instructor may have a local download area)
+	<p>
+	  The Big Picture
+	  <ol>
+	    <li>Create a JBDS Project</li>
+	    <li>Create an OpenShift Application</li>
+	    <li>Link the two together</li>
+	    <li>Publish (push) your application to OpenShift</li>
+	  </ol>
+	  The Details.
+	  <ol>
+	    <li>
+	      Start JBDS. In the <em>Project Examples</em> Tab open the <em>JBoss Quickstarts</em> tab and choose the <em>kitchensink</em>,
+	      <em>helloworld</em> or <em>greeter</em> example.</li>
+	    <li>Optionally, run the app locally.</li>
+	    <li>Create a new OpenShift Application from JBoss Central tab (use a jbosseap cartridge).</li>
+	    <li><b>Uncheck</b> <em>create a new project</em> and browse for an existing JBDS project.</li>
+	    <li>When this wizard finshes an OpenShift app was created but your local
+	      contents have not been published.</li>
+	    <li>Open the Server tab near the bottom and expand your openshift application.</li>
+	    <li>Right click on your project and choose 'full publish'.</li>
+	    <li>The first publish will take some time for the maven artifacts to be downloaded.</li>
+	    <li>Now make some changes to the app and republish</li>
+	  </ol>
+
+
+	  <!-- Body end -->
+      </div>
+      <div id="footer">
+	<!-- Footer start -->
+	<p><h6><a href="index.html">OpenShift PaaS Road Tour, February 2013</a></h6></p>
+	<!-- Footer end -->
+      </div>
+    </div>
+  </body>
+</html>
